@@ -1,0 +1,28 @@
+This is a Log Search and Summarizer tool. It indexes the given log file and show important patterns in the log file. You can also search for patterns of your interest.
+
+
+REQUIREMENTS:
+1. Perl
+2. Apache (to execute cgi script)
+3. OS: Linux (Tested on Fedora Core 5-7, compatible with other Unixes).
+4. Disk Space: Twice the size of log file is required.
+
+NO INSTALLING. HOW TO RUN:
+
+
+$ perl Monitor.pl yourlogfile
+
+This takes time to execute.
+
+Now a new folder 'yourlogfile_data' will be created. Edit cgi-bin/CONFIG file, by giving the path to this folder. eg: /home/suman/LogSum/yourlogfile_data/
+Remember, don't forget the '/' at the end of the path(It is compulsory).
+
+Now move the 'CONFIG' and 'LogSummarizer.cgi' in 'cgi-bin' folder to /var/www/cgi-bin/ folder(needs root permission). If you are not a root user, and can host cgi scripts through public_html, copy those two files to ~/public_html/cgi-bin/.
+
+Now type http://localhost/cgi-bin/LogSummarizer.cgi in any browser. Further, you will enjoy your log browsing.
+
+Thanks,
+Chalavadi Suman Kumar,
+Research Student,
+M.Tech Computational Linguistics, 
+IIIT, Hyderabad.
